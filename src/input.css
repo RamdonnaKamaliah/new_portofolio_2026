@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #FFF8FB;
+  --surface: #FCE9F1;
+  --primary: #E0357F;
+  --accent: #0E9F76;
+  --ink: #1D1A26;
+  --on-primary: #FFFFFF;
+}
+
+.dark {
+  --canvas: #12101A;
+  --surface: #1C1927;
+  --primary: #FF5C9E;
+  --accent: #5EF2C0;
+  --ink: #F3EEF8;
+  --on-primary: #12101A;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-ink: var(--ink);
+  --color-on-primary: var(--on-primary);
+
+  --color-code-bg: #12101A;
+  --color-code-text: #F3EEF8;
+  --color-code-key: #FF5C9E;
+  --color-code-str: #5EF2C0;
+
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: Inter, Poppins, sans-serif;
+
+  --shadow-glow: 0 0 20px color-mix(in srgb, var(--primary) 40%, transparent);
+  --animate-blink: blink 1s step-end infinite;
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
